@@ -1,5 +1,5 @@
 def exhibit_name_error():
-    name = ['Chris', 'Kevin', 'Tyler']
+    name = ['Chris', 'Kevin', 'Tyler', "Kevin"]
     print(title)
 
 
