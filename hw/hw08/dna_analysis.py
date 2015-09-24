@@ -52,7 +52,10 @@ total_count = 0
 # Number of G and C nucleotides seen so far.
 gc_count = 0
 at_count = 0
-
+a_tally = 0
+g_tally = 0
+c_tally = 0
+t_tally = 0
 
 # for each base pair in the string,
 for bp in seq:
@@ -63,8 +66,18 @@ for bp in seq:
     if bp == 'C' or bp == 'G':
         # increment the count of gc
         gc_count = gc_count + 1
-    elif bp == 'A' or bp == 't':
+    elif bp == 'A' or bp == 'T':
             at_count = at_count + 1
+
+for bp in seq:
+    if bp == 'A':
+        a_tally = a_tally + 1
+    elif bp == 'G':
+        g_tally = g_tally + 1
+    elif bp == 'C':
+        c_tally = c_tally + 1
+    elif bp == 'T':
+        t_tally = t_tally + 1
 
 
 # divide the gc_count by the total_count
@@ -74,3 +87,5 @@ at_content = float(at_count) / total_count
 # Print the answer
 print('GC-content:', gc_content)
 print('AT-content:', at_content)
+print('Total nucleotides are:', a_tally, 'As', c_tally, 'Cs', g_tally, 'Gs', \
+t_tally, 'Ts')

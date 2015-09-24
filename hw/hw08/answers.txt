@@ -26,7 +26,7 @@ By commenting out seq and linenum, the for loop no longer has anything to refere
 Problem 4:
 
 GC-content: 0.3
-AT-content: 0.5
+AT-content: 0.7
 
 Problem 5:
 
