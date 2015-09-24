@@ -7,7 +7,7 @@ resistance. Since then I've worked in a variety of jobs and field, my
 current position is one I created for myself as an independent marketing/
 business consultant specializing in geriatric companies. So skilled-nursing
 clinics, assisted-living homes, CCRCs that kind of thing. Here's my current
-primary client (https://roolan.com"Roo Lan Health Care"). As you can see their
+primary client (https://roolan.com "Roo Lan Health Care"). As you can see their
 website needs plenty of work.
 
 ##Why I'm at Codefellows
