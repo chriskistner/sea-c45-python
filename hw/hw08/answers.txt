@@ -30,24 +30,107 @@ AT-content: 0.7
 
 Problem 5:
 
-...
+GC-content: 0.4302926296296296
+AT-content: 0.5689938518518518
+Total nucleotides are: 7701287 As, 5879128 Cs, 5738773 Gs, 7661547 Ts
+
 
 Problem 6:
+for my run of the sequences, in most cases the number of nucleotides counted was less than the total in the sequence. Clealry the difference in the lengths of the total sequence are due to the fact that each file is a different size. The difference is very small, usually only a few percent of the total. My guess is that the Len(seq) is detecting additional character, or character spaces, that don't fall under the nucleotide search parameters.
 
-...
+name= data/sample_1.fastq
+GC-content: 0.4302926296296296
+AT-content: 0.5689938518518518
+Nucleotides in sequence: 26980735
+Total nucleotides are: 7701287 As 5879128 Cs 5738773 Gs 7661547 Ts
+Length of Sequence: 27000000
+
+name='data/sample_2.fastq
+GC-content: 0.45105133333333336
+AT-content: 0.548112925925926
+Nucleotides in sequence: 26977435
+Total nucleotides are: 7467696 As 6075218 Cs 6103168 Gs 7331353 Ts
+Length of Sequence: 27000000
+
+name= data/sample_3.fastq
+GC-content: 0.6468641125240355
+AT-content: 0.3531311560764628
+Nucleotides in sequence: 9510883
+Total nucleotides are: 1561973 As 3144239 Cs 3008039 Gs 1796632 Ts
+Length of Sequence: 9510928
+
+name= data/sample_4.fastq
+GC-content: 0.3478523411663431
+AT-content: 0.6521429498904319
+Nucleotides in sequence: 9980961
+Total nucleotides are: 3304273 As 1851138 Cs 1620779 Gs 3204771 Ts
+Length of Sequence: 9981008
+
+name= data/sample_5.fastq
+GC-content: 0.2631578947368421
+AT-content: 0.7236842105263158
+Nucleotides in sequence: 75
+Total nucleotides are: 27 As 9 Cs 11 Gs 28 Ts
+Length of Sequence: 76
+
+name= data/sample_6.fastq
+GC-content: 0.4915185185185185
+AT-content: 0.5081111111111111
+Nucleotides in sequence: 26990
+Total nucleotides are: 6867 As 5967 Cs 7304 Gs 6852 Ts
+Length of Sequence: 27000
+
+name= data/test-high-gc-1.fastq
+GC-content: 0.5994
+AT-content: 0.3966
+Nucleotides in sequence: 39840
+Total nucleotides are: 7970 As 11800 Cs 12176 Gs 7894 Ts
+Length of Sequence: 40000
+
+name= data/test-high-gc-2.fastq
+GC-content: 0.79775
+AT-content: 0.198275
+Nucleotides in sequence: 39841
+Total nucleotides are: 3908 As 15955 Cs 15955 Gs 4023 Ts
+Length of Sequence: 40000
+
+name= data/test-moderate-gc-1.fastq
+GC-content: 0.495025
+AT-content: 0.501
+Nucleotides in sequence: 39841
+Total nucleotides are: 10077 As 9983 Cs 9818 Gs 9963 Ts
+Length of Sequence: 40000
+
+name= data/test-moderate-gc-2.fastq
+GC-content: 0.399275
+AT-content: 0.596
+Nucleotides in sequence: 39811
+Total nucleotides are: 11813 As 7999 Cs 7972 Gs 12027 Ts
+Length of Sequence: 40000
+
+name='data/test-small.fastq
+GC-content: 0.3
+AT-content: 0.7
+Nucleotides in sequence: 9
+Total nucleotides are: 5 As 2 Cs 1 Gs 2 Ts
+Length of Sequence: 10
+
 
 Problem 7:
 
-...
+AT/GC Ratio: 1.3223416174746196
 
 Problem 8:
 
-...
+GC-content: 0.4302926296296296
+AT-content: 0.5689938518518518
+AT/GC Ratio: 1.3223416174746196
+Moderate GC Content
 
 Collaboration:
 
-...
+Regrettably due to  my busy schedule  I didn't really have a chance to work on this project with anyone collaboratively. Too bad too, I might have gotten it turned in on time if I had.
 
 Reflection:
 
-...
+This was really the first time EVER that I've created or ran a program I've built, even partially, in anything other than a web browser. I initially had some challenges getting the basics of Python3 to run the files, mainly because my Git Repository was accidently deleting them. Once I got into it though I really enjoyed analyzing the data. I look forward to more projects with large data structures in the future.
