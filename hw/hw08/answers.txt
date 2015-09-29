@@ -17,41 +17,6 @@ Problem 1:
 
 Problem 2:
 
-<<<<<<< HEAD
-...
-
-Problem 3:
-
-...
-
-Problem 4:
-
-...
-
-Problem 5:
-
-...
-
-Problem 6:
-
-...
-
-Problem 7:
-
-...
-
-Problem 8:
-
-...
-
-Collaboration:
-
-...
-
-Reflection:
-
-...
-=======
 GC-content: 0.3
 
 Problem 3:
@@ -169,4 +134,3 @@ Regrettably due to  my busy schedule  I didn't really have a chance to work on t
 Reflection:
 
 This was really the first time EVER that I've created or ran a program I've built, even partially, in anything other than a web browser. I initially had some challenges getting the basics of Python3 to run the files, mainly because my Git Repository was accidently deleting them. Once I got into it though I really enjoyed analyzing the data. I look forward to more projects with large data structures in the future.
->>>>>>> hw08
