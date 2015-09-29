@@ -51,7 +51,6 @@ for line in inputfile:
 total_count = 0
 # Number of G and C nucleotides seen so far.
 gc_count = 0
-
 at_count = 0
 a_tally = 0
 g_tally = 0
@@ -69,12 +68,6 @@ for bp in seq:
     if bp == 'C' or bp == 'G':
         # increment the count of gc
         gc_count = gc_count + 1
-
-# divide the gc_count by the total_count
-gc_content = float(gc_count) / total_count
-
-# Print the answer
-print('GC-content:', gc_content)
     elif bp == 'A' or bp == 'T':
             at_count = at_count + 1
 
@@ -115,6 +108,6 @@ print('AT-content:', at_content)
 print('AT/GC Ratio:', ratio)
 print(gc_level)
 print('Nucleotides in sequence:', total_n)
-print('Total nucleotides are:', a_tally, 'As', c_tally, 'Cs', g_tally, 'Gs', \
-t_tally, 'Ts')
+print('Total nucleotides are:', a_tally, 'As', c_tally, 'Cs', g_tally, 'Gs',
+    t_tally, 'Ts')
 print('Length of Sequence:', total_l)
