@@ -25,6 +25,10 @@ Dear {name},
 Thank you so much for your generous donation of {amount}. Your funds will go
 to maintaining the our habitat for toothless ant eaters in Scandinavia. Grinner
 , our 50 year old ant eater is smailing at you.
+<<<<<<< HEAD
+=======
+
+>>>>>>> hw11
 Thanks again,
 Chris Kistner
 Director, PTA.
