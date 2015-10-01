@@ -66,8 +66,17 @@ def main_menu():
 
 
 def list_donor_names():
-    # returns a list of all donor names in the logbook, one per line.
-    # global logbook
+    '''
+    Returns a list of all donor names in the logbook, one per line.
+    # Runs through all donors in the logbook  and exports a text file with
+    Thank You Messages for the sum of their donations.
+    '''
+    for name, amount in logbook.items():
+        letter_log = open('ty_logbook.txt', 'a')
+        letter = t_letter.format(name=name, amount=sum(amount))
+        letter_log.write(letter + '\n')
+        letter_log.flush()
+        letter_log.close()
     return '\n'.join(logbook.keys())
 
 
@@ -89,6 +98,12 @@ def t_menu(user_input):
                 letter = t_letter.format(name=name, amount=format_amount(amount
                 ))
                 print(letter)
+                #Prompts the User for a filename and exports the message there.
+                filename = input("Enter file  name to export message too.")
+                out = open(filename, "w")
+                out.write(letter)
+                out.write('\n')
+                out.close()
                 return repl(enter_cont)
         else:
             return 'Invalid Name'
