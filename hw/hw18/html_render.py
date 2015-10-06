@@ -19,23 +19,33 @@ class Element(object):
         self.link = link
 
     def append(self, child):
-        self.children.append(child)
+        if type(child) == str:
+            self.content += child
+        else:
+            self.children.append(child)
 
     def render(self, f):
         if self.style == '':
             f.write('<{name}>'.format(name=self.name))
             f.write('\n')
+            if self.children == []:
+                f.write(self.content)
+            else:
+                for items in self.children:
+                    items.render(f)
+            f.write("</{name}>".format(name=self.name))
+            f.write('\n')
         else:
             f.write('<{name} style= "{style}">'.format(name=self.name,
                     style=self.style))
             f.write('\n')
-        if self.children == []:
-            f.write(self.content)
-        else:
-            for items in self.children:
-                items.render(f)
-                f.write("</{name}>".format(name=self.name))
-                f.write('\n')
+            if self.children == []:
+                f.write(self.content)
+            else:
+                for items in self.children:
+                    items.render(f)
+            f.write("</{name}>".format(name=self.name))
+            f.write('\n')
 
 
 class Html(Element):
@@ -70,14 +80,18 @@ class Hr(Element):
 
 class A(Element):
     def __init__(self, link='', content='', style=''):
-        Element.__init__(self, content=content, link=link, style='', name='A')
+        Element.__init__(self, content=content, link=link, style='', name='a')
 
     def render(self, f):
         if self.style == '':
             f.write('<{name}  href= "{link}" >'.format(name=self.name,
                     link=self.link))
+            f.write(self.content)
+            f.write("</{name}>".format(name=self.name))
             f.write('\n')
         else:
-            f.write(' \n     <{name} style= "{style}", href= "{link}">'
+            f.write(' \n <{name} style= "{style}", href= "{link}">'
                     .format(name=self.name, style=self.style, link=self.link))
+            f.write(' "{content}" '.format(content=self.content))
+            f.write("</{name}>".format(name=self.name))
             f.write('\n')
