@@ -25,10 +25,11 @@ def row_to_edge(row):
 
     return float(row["Dem"]) - float(row["Rep"])
 
+
 def state_edges(election_result_rows):
     result = {}
     for row in election_result_rows:
-        state = row['state']
+        state = row['State']
         edge = row_to_edge(row)
         result[state] = edge
     return result
@@ -37,6 +38,7 @@ def state_edges(election_result_rows):
 # Problem 2: Find the most recent poll row
 ################################################################################
 
+
 def earlier_date(date1, date2):
     """
     Given two dates as strings (formatted like "Oct 06 2012"), returns True if
@@ -44,23 +46,23 @@ def earlier_date(date1, date2):
     """
     return (time.strptime(date1, "%b %d %Y") < time.strptime(date2, "%b %d %Y"))
 
+
 def most_recent_poll_row(poll_rows, pollster, state):
     """
     Given a list of *PollDataRow*s, returns the most recent row with the
     specified *Pollster* and *State*. If no such row exists, returns None.
     """
-    #TODO: Implement this function
 
-most_recent = None
+    most_recent = None
 
-for row in poll_rows:
-    if (row['Pollster'] == pollster and row['State'] == state):
-        if (most_recent is None):
+    for row in poll_rows:
+        if (row['Pollster'] == pollster and row['State'] == state):
+            if (most_recent is None):
                 most_recent = row
-        else:
-            if(earlier_date(most_recent['Date'], row['Date'])):
-                most_recent = row
-return most_recent
+            else:
+                if(earlier_date(most_recent['Date'], row['Date'])):
+                    most_recent = row
+    return most_recent
 
 
 ################################################################################
@@ -72,29 +74,32 @@ def unique_column_values(rows, column_name):
     Given a list of rows and the name of a column (a string),
     returns a set containing all values in that column.
     """
-    #TODO: Implement this function
-    pass
+    my_set = set()
+    for row in rows:
+        my_set.add(row[column_name])
+    return my_set
+
 
 def pollster_predictions(poll_rows):
     """
     Given a list of *PollDataRow*s, returns *PollsterPredictions*.
     For a given pollster, uses only the most recent poll for a state.
     """
-    #TODO: Implement this function
 
-state_list = unique_column_values(poll_rows, 'State')
+    state_list = unique_column_values(poll_rows, 'State')
 
-pollster_list = unique_column_values(poll_rows, 'Pollster')
+    pollster_list = unique_column_values(poll_rows, 'Pollster')
 
-pollster_state_data = {}
+    pollster_state_data = {}
 
-for pollster in pollster_list:
-    poll_state_edge = {}
-    for state in state_list:
-        a = most_recent_poll_row(poll_rows, pollster, state)
-        if a is not None:
-            poll_state_edge[state] = float(a["Dem"]) - float(a["Rep"])
-        pollster_state_data[pollster] = poll_state_edge
+    for pollster in pollster_list:
+        poll_state_edge = {}
+        for state in state_list:
+            a = most_recent_poll_row(poll_rows, pollster, state)
+            if a is not None:
+                poll_state_edge[state] = float(a["Dem"]) - float(a["Rep"])
+            pollster_state_data[pollster] = poll_state_edge
+
     return pollster_state_data
 
 
