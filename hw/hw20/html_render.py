@@ -28,17 +28,16 @@ class Element(object):
         if self.style == '':
             f.write('<{name}>'.format(name=self.name))
             f.write('\n')
-            if self.children == []:
-                f.write(self.content)
-            else:
-                for items in self.children:
-                    items.render(f)
+            for items in self.children:
+                items.render(f)
+            f.write(self.content)
             f.write("</{name}>".format(name=self.name))
             f.write('\n')
         else:
             f.write('<{name} style= "{style}">'.format(name=self.name,
                     style=self.style))
             f.write('\n')
+            f.write(self.content)
             if self.children == []:
                 f.write(self.content)
             else:
